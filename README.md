@@ -90,9 +90,45 @@ pip3 install --user wheel auditwheel
 미리 `testresources`를 같이 설치해줍니다.
 
 ### - Carla Simulator 설치
+위의 종속성 패키지 설치를 마친 후에 자동으로 Carla-Simulator 폴더로 이동하여, 주행 성능 평가 기능을 제공하는 Carla Simulator tar 압축파일을 받고 압축 해제를 합니다.  
+압축 해제 후, 시스템 설정의 환경변수를 모아둔 `~/.bashrc` 파일에 아래와 같이 환경변수를 추가해줍니다.  
 
 ```shell
+# 환경변수 설정
+echo "export CARLA_ROOT=${AGC_ROOT}/Carla-Leaderboard_2_0" >> ~/.bashrc
+
+echo "export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI" >> ~/.bashrc
+echo "export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla " >> ~/.bashrc
+echo "export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/agents" >> ~/.bashrc
+echo "export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/dist/carla-$CARLA_VERSION-py2.7-linux-x86_64.egg" >> ~/.bashrc    # ROS Melodic은 Python2.x를 사용, Python3.x로 추후 변경 예정
+echo "export CARLA_SERVER=~/carla_simulator/CARLA_$CARLA_VERSION/CarlaUE4.sh" >> ~/.bashrc
 ```
+환경변수 설정 후, Carla Simulator 폴더 내의 PythonAPI/examples 폴더로 이동하여 위의 Python 종속성 패키지에 잠깐 언급되었던 부분에 대해 추가 Python 패키지를 설치해줍니다.
+`pip install -r requirements.txt`
+
+Python 패키지가 설치 완료 되었다면 테스트 구동을 해봐야겠지요?  
+(1) 1st terminal   
+첫 번째 터미널에서는 Carla Simulator 루트 디렉토리로 이동하여 Carla Simulator의 Server를 실행해줍니다.  
+```shell
+./CarlaUE4.sh 
+```  
+
+(2) 2nd terminal
+두 번째 터미널에서는 여러 차량들을 배치하여 교통상황을 꾸미는 Carla Simulator의 Client를 실행해줍니다.  
+```shell
+python generate_traffic.py      # 랜덤으로 차량 배치를 합니다
+```
+위의 `generate_traffic.py`를 실행하면 아래 그림과 같이 차량이 없던 Carla Simulator Server에 차량이 무작위로 배치되며 주행하는 것을 확인하실 수 있습니다.
+
+(3) 3rd terminal
+세 번째 터미널에서는 차량 조종 및 차량 움직임 등을 볼 수 있는 Carla Simulator의 Client를 실행해줍니다.
+```shell
+python manual_control.py      
+```
+pygame 기반으로 동작하는 Carla Simulator의 Client로서, 직접 차량을 조작할 수 있습니다.  
+Carla Simulator의 Auto-pilot 기능을 실행하려면 'P'키를 눌러주면 자동으로 주행하는 것을 확인하실 수 있습니다.
+
+
 ### - Carla Leaderboard 설치
 ```shell
 ```
