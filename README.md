@@ -107,13 +107,12 @@ pip3 install --user wheel auditwheel
 
 ```shell
 # 환경변수 설정
-echo "export CARLA_ROOT=${AGC_ROOT}/Carla-Leaderboard_2_0" << ~/.bashrc
+sh -c "echo \"export CARLA_ROOT=/home/${USER}/Desktop/AGC/Carla-Simulator\" >> ~/.bashrc"
 
-echo "export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI" << ~/.bashrc
-echo "export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla " << ~/.bashrc
-echo "export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/agents" << ~/.bashrc
-echo "export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/dist/carla-$CARLA_VERSION-py2.7-linux-x86_64.egg" << ~/.bashrc    # ROS Melodic은 Python2.x를 사용, Python3.x로 추후 변경 예정
-echo "export CARLA_SERVER=~/carla_simulator/CARLA_$CARLA_VERSION/CarlaUE4.sh" << ~/.bashrc
+sh -c "echo \"export PYTHONPATH=/home/${USER}/Desktop/AGC/Carla-Simulator/PythonAPI\" >> ~/.bashrc"
+sh -c "echo \"export PYTHONPATH=/home/${USER}/Desktop/AGC/Carla-Simulator/PythonAPI/carla\" >> ~/.bashrc"
+sh -c "echo \"export PYTHONPATH=/home/${USER}/Desktop/AGC/Carla-Simulator/PythonAPI/carla/agents\" >> ~/.bashrc"
+sh -c "echo \"export PYTHONPATH=/home/${USER}/Desktop/AGC/Carla-Simulator/PythonAPI/carla/dist/carla-0.9.13-py2.7-linux-x86_64.egg\" >> ~/.bashrc"    # ROS Melodic은 Python2.x를 사용, Python3.x로 추후 변경 예정
 ```
 환경변수 설정 후, Carla Simulator 폴더 내의 PythonAPI/examples 폴더로 이동하여 위의 Python 종속성 패키지에 잠깐 언급되었던 부분에 대해 추가 Python 패키지를 설치해줍니다.
 `pip install -r requirements.txt`
@@ -152,7 +151,7 @@ Carla Leaderboard와 마찬가지로 Calra-Scenario_Runner 폴더로 이동하�
 그 후, Carla Leaderboard, Carla Scenario Runner의 경로를 환경변수에 등록, Python 경로를 추가해주도록 해두었습니다.  
 
 ```shell
-echo "export LEADERBOARD_ROOT=/home/${USER}/Desktop/AGC/Carla-Leaderboard" << ~/.bashrc
-echo "export SCENARIO_RUNNER_ROOT=/home/${USER}/Desktop/AGC/Carla-Scenario_Runner" << ~/.bashrc
-echo "export PYTHONPATH="${CARLA_ROOT}/PythonAPI/carla/":"${SCENARIO_RUNNER_ROOT}":"${LEADERBOARD_ROOT}":"${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.13-py2.7-linux-x86_64.egg":${PYTHONPATH}" << ~/.bashrc     # 추후 Python3.x로 진행 예정
+sh -c "echo \"export LEADERBOARD_ROOT=/home/${USER}/Desktop/AGC/Carla-Leaderboard\" >> ~/.bashrc"
+sh -c "echo \"export SCENARIO_RUNNER_ROOT=/home/${USER}/Desktop/AGC/Carla-Scenario_Runner\" >> ~/.bashrc"
+sh -c "echo \"export PYTHONPATH="${PYTHONPATH}":"/home/${USER}/Desktop/AGC/Carla-Scenario_Runner":"/home/${USER}/Desktop/AGC/Carla-Leaderboard":"/home/${USER}/Desktop/AGC/Carla-Simulator/PythonAPI/carla/dist/carla-0.9.13-py2.7-linux-x86_64.egg"\" >> ~/.bashrc"     # 추후 Python3.x로 진행 예정
 ```
