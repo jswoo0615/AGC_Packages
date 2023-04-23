@@ -72,6 +72,8 @@ pip install -r requirements.txt
 pip3 install -r requirements.txt
 
 # 환경변수 등록
+echo "export LEADERBOARD_ROOT=/home/${USER}/Desktop/AGC/Carla-Leaderboard" >> ~/.bashrc
+echo "export SCENARIO_RUNNER_ROOT=/home/${USER}/Desktop/AGC/Carla-Scenario_Runner" >> ~/.bashrc
 echo "export PYTHONPATH="${CARLA_ROOT}/PythonAPI/carla/":"${SCENARIO_RUNNER_ROOT}":"${LEADERBOARD_ROOT}":"${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.13-py2.7-linux-x86_64.egg":${PYTHONPATH}" << ~/.bashrc     # 추후 Python3.x로 진행 예정
 
 exit 0
