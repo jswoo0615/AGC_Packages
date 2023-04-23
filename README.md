@@ -1,17 +1,17 @@
 # Carla Simulator 패키지 설치
 ## 목차
 [1. Installing Graphic Driver](#1-installing-graphic-driver)
-- [종속성 패키지 설치](#종속성-패키지-설치)
-- [그래픽 드라이버 설치](#그래픽-드라이버-설치)
+- [종속성 패키지 설치](#11-종속성-패키지-설치)
+- [그래픽 드라이버 설치](#12-그래픽-드라이버-설치)
 
 [2. Installing Carla Simulator Packages](#2-installing-carla-simulator-packages)
-- [의존성 패키지 설치 (Carla Simulator)](#의존성-패키지-설치-carla-simulator)
-- [Carla Simulator 설치](#carla-simulator-설치)
-- [Carla Leaderboard 설치](#carla-leaderboard-설치)
-- [Carla Scenario Runner 설치](#carla-scenario-runner-설치)
+- [의존성 패키지 설치 (Carla Simulator)](#21-의존성-패키지-설치-carla-simulator)
+- [Carla Simulator 설치](#22-carla-simulator-설치)
+- [Carla Leaderboard 설치](#23-carla-leaderboard-설치)
+- [Carla Scenario Runner 설치](#24-carla-scenario-runner-설치)
 
 ## 1. Installing Graphic Driver
-### - 종속성 패키지 설치
+### 1.1 종속성 패키지 설치
 Carla Simulator를 사용하기 전에 그래픽 카드의 드라이버를 설치해주어야 합니다.  
 그래픽 드라이버 설치에 앞서 종속성 패키지를 설치해야 합니다.  
 먼저 패키지 리스트를 업데이트, 업그레이드를 진행합니다.
@@ -25,7 +25,7 @@ sudo apt-get upgrade -y
 sudo apt-get install build-essential -y
 ```
 
-### - 그래픽 드라이버 설치
+### 1.2 그래픽 드라이버 설치
 그래픽 드라이버를 설치하는 방법은 여러가지 있지만, autoinstall로 진행하도록 하겠습니다.
 먼저 그래픽 드라이버 리포지토리를 패키지 리스트에 추가를 하고,
 ```shell
@@ -52,7 +52,7 @@ sudo ubuntu-drivers autoinstall
 전반적인 패키지 구성은 아래 그림과 같이 총 네 가지로 구분되며, 현재 브랜치에서는 Carla-Leaderboard, Carla Scenario_Runner, Carla-Simulator 세 가지를 다운로드 및 설치까지 하는 패키지로 합니다.  
 <img width="218" alt="Screenshot 2023-04-23 at 12 14 08 PM" src="https://user-images.githubusercontent.com/128343128/233817757-631d04de-7696-4e37-9980-7bd3a1f707af.png">
 
-### - 의존성 패키지 설치 (Carla Simulator)
+### 2.1 의존성 패키지 설치 (Carla Simulator)
 ```shell
 # 의존성 패키지 설치
 sudo apt-get update &&
@@ -101,7 +101,7 @@ pip3 install --user wheel auditwheel
 또한, 추후 Carla Simulator에서 `requirements.txt`에 있는 Python 패키지중 `launchpadlib` 패키지를 설치할 때 `testresources` 패키지가 없다며 해당 패키지는 건너 뛰며 설치가 되는 경우가 있습니다.  
 미리 `testresources`를 같이 설치해줍니다.
 
-### - Carla Simulator 설치
+### 2.2 Carla Simulator 설치
 위의 종속성 패키지 설치를 마친 후에 자동으로 Carla-Simulator 폴더로 이동하여, 주행 성능 평가 기능을 제공하는 Carla Simulator tar 압축파일을 받고 압축 해제를 합니다.  
 압축 해제 후, 시스템 설정의 환경변수를 모아둔 `~/.bashrc` 파일에 아래와 같이 환경변수를 추가해줍니다.  
 
@@ -141,11 +141,11 @@ pygame 기반으로 동작하는 Carla Simulator의 Client로서, 직접 차량�
 Carla Simulator의 Auto-pilot 기능을 실행하려면 'P'키를 눌러주면 자동으로 주행하는 것을 확인하실 수 있습니다.
 
 
-### - Carla Leaderboard 설치
+### 2.3 Carla Leaderboard 설치
 Carla Simulator 설치를 마치고 Carla-Leaderboard 폴더로 이동하여, 주행 성능 평가 기능을 제공하는 leaderboard를 깃허브 리포지토리에서 복제합니다.  
 자동으로 경로를 변경하여 해당 깃허브 리포지토리에서 복제 후, 필요한 Python 패키지를 설치하게 되어있습니다.  
 
-### - Carla Scenario Runner 설치
+### 2.4 Carla Scenario Runner 설치
 Carla Leaderboard와 마찬가지로 Calra-Scenario_Runner 폴더로 이동하여, 시나리오를 구동할 수 있는 프로그램을 깃허브 리포지토리에서 복제 후, 필요한 Python 패키지를 자동으로 설치하게 되어있습니다.
 
 그 후, Carla Leaderboard, Carla Scenario Runner의 경로를 환경변수에 등록, Python 경로를 추가해주도록 해두었습니다.  
