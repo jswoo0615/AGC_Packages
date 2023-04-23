@@ -130,8 +130,16 @@ Carla Simulator의 Auto-pilot 기능을 실행하려면 'P'키를 눌러주면 �
 
 
 ### - Carla Leaderboard 설치
-```shell
-```
+Carla Simulator 설치를 마치고 Carla-Leaderboard 폴더로 이동하여, 주행 성능 평가 기능을 제공하는 leaderboard를 깃허브 리포지토리에서 복제합니다.  
+자동으로 경로를 변경하여 해당 깃허브 리포지토리에서 복제 후, 필요한 Python 패키지를 설치하게 되어있습니다.  
+
 ### - Carla Scenario Runner 설치
+Carla Leaderboard와 마찬가지로 Calra-Scenario_Runner 폴더로 이동하여, 시나리오를 구동할 수 있는 프로그램을 깃허브 리포지토리에서 복제 후, 필요한 Python 패키지를 자동으로 설치하게 되어있습니다.
+
+그 후, Carla Leaderboard, Carla Scenario Runner의 경로를 환경변수에 등록, Python 경로를 추가해주도록 해두었습니다.  
+
 ```shell
+echo "export LEADERBOARD_ROOT=/home/${USER}/Desktop/AGC/Carla-Leaderboard" >> ~/.bashrc
+echo "export SCENARIO_RUNNER_ROOT=/home/${USER}/Desktop/AGC/Carla-Scenario_Runner" >> ~/.bashrc
+echo "export PYTHONPATH="${CARLA_ROOT}/PythonAPI/carla/":"${SCENARIO_RUNNER_ROOT}":"${LEADERBOARD_ROOT}":"${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.13-py2.7-linux-x86_64.egg":${PYTHONPATH}" << ~/.bashrc     # 추후 Python3.x로 진행 예정
 ```
