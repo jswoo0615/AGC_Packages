@@ -86,7 +86,7 @@ pip3 install --user wheel auditwheel
 ```
 해당 종속성 패키지는 `carla-sim_packages.sh`를 실행하면 자동으로 설치하게 되어있습니다.
 
-또한, 추후 Carla Simulator에서 `requirements.txt`에 있는 Python 패키지중 `launchpadlib` 패키지를 설치할 때 `testresources` 패키지가 없다며 해당 패키지는 건너 뛰며 설치가 되는 경우가 있습니다.
+또한, 추후 Carla Simulator에서 `requirements.txt`에 있는 Python 패키지중 `launchpadlib` 패키지를 설치할 때 `testresources` 패키지가 없다며 해당 패키지는 건너 뛰며 설치가 되는 경우가 있습니다.  
 미리 `testresources`를 같이 설치해줍니다.
 
 ### - Carla Simulator 설치
