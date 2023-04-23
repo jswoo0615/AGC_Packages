@@ -55,6 +55,10 @@ echo "export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/agents" >> ~/.
 echo "export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/dist/carla-$CARLA_VERSION-py2.7-linux-x86_64.egg" >> ~/.bashrc    # ROS Melodic은 Python2.x를 사용, Python3.x로 추후 변경 예정
 echo "export CARLA_SERVER=~/carla_simulator/CARLA_$CARLA_VERSION/CarlaUE4.sh" >> ~/.bashrc
 
+# Python 패키지 설치
+cd PythonAPI/exmaples
+pip install -r requirements.txt
+
 # Carla Leaderboard 설치
 cd /home/${USER}/Desktop/AGC/Carla-Leaderboard
 git clone -b leaderboard-2.0 --single-branch https://github.com/carla-simulator/leaderboard.git
