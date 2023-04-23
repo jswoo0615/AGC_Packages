@@ -119,20 +119,21 @@ echo "export CARLA_SERVER=~/carla_simulator/CARLA_$CARLA_VERSION/CarlaUE4.sh" >>
 `pip install -r requirements.txt`
 
 Python 패키지가 설치 완료 되었다면 테스트 구동을 해봐야겠지요?  
-(1) 1st terminal   
+
+**(1) 1st terminal**   
 첫 번째 터미널에서는 Carla Simulator 루트 디렉토리로 이동하여 Carla Simulator의 Server를 실행해줍니다.  
 ```shell
 ./CarlaUE4.sh 
 ```  
 
-(2) 2nd terminal
+**(2) 2nd terminal**  
 두 번째 터미널에서는 여러 차량들을 배치하여 교통상황을 꾸미는 Carla Simulator의 Client를 실행해줍니다.  
 ```shell
 python generate_traffic.py      # 랜덤으로 차량 배치를 합니다
 ```
 위의 `generate_traffic.py`를 실행하면 아래 그림과 같이 차량이 없던 Carla Simulator Server에 차량이 무작위로 배치되며 주행하는 것을 확인하실 수 있습니다.
 
-(3) 3rd terminal
+**(3) 3rd terminal**  
 세 번째 터미널에서는 차량 조종 및 차량 움직임 등을 볼 수 있는 Carla Simulator의 Client를 실행해줍니다.
 ```shell
 python manual_control.py      
