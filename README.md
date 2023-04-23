@@ -66,7 +66,7 @@ sudo update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-8/bin/clan
 기본적인 컴파일러 설치 세팅 완료 후 Carla Simulator에서 차량 움직임을 확인할 수 있는 시뮬레이션을 하기 위한 Python 종속성 패키지를 설치합니다.  
 차량 움직임을 구동하는 방식은 Python 패키지인 pygame을 기반으로 동작합니다.
 
-pip 업그레이드를 해준 후, Carla Simulato에서 필요한 Python 패키지를 설치해줍니다.
+pip 업그레이드를 해준 후, Carla Simulator에서 필요한 Python 패키지를 설치해줍니다.
 ```shell
 # pip 설치
 # Python3
@@ -85,6 +85,9 @@ pip3 install --user wheel auditwheel
 
 ```
 해당 종속성 패키지는 `carla-sim_packages.sh`를 실행하면 자동으로 설치하게 되어있습니다.
+
+또한, 추후 Carla Simulator에서 `requirements.txt`에 있는 Python 패키지중 `launchpadlib` 패키지를 설치할 때 `testresources` 패키지가 없다며 해당 패키지는 건너 뛰며 설치가 되는 경우가 있습니다.
+미리 `testresources`를 같이 설치해줍니다.
 
 ### - Carla Simulator 설치
 
