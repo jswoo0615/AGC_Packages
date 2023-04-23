@@ -37,6 +37,9 @@ pip3 install --user distro &&
 pip install --user wheel &&
 pip3 install --user wheel auditwheel
 
+pip install testresouces &&
+pip3 install testresources
+
 
 # Carla 시뮬레이터 설치
 cd /home/${USER}/Desktop/AGC/Carla-Simulator
