@@ -28,6 +28,10 @@ pip3 install --upgrade pip
 pip install --upgrade pip
 
 # 파이썬 의존성 패키지 설치
+
+pip install testresouces &&
+pip3 install testresources
+
 pip install --user setuptools &&
 pip3 install --user -Iv setuptools==47.3.1 &&
 pip install --user distro &&
@@ -35,8 +39,7 @@ pip3 install --user distro &&
 pip install --user wheel &&
 pip3 install --user wheel auditwheel
 
-pip install testresouces &&
-pip3 install testresources
+
 
 
 # Carla 시뮬레이터 설치
