@@ -38,7 +38,9 @@ autoinstall 명령어로 설치를 진행합니다
 sudo ubuntu-drivers autoinstall
 ```
 
-설치 후 재부팅을 한 후 `nvidia-smi` 명령어를 입력하면 아래 그림과 같이 그래픽 카드 드라이버가 설치됨을 확인하실 수 있습니다. (그림 추가 예정)
+설치 후 재부팅을 한 후 `nvidia-smi` 명령어를 입력하면 아래 그림과 같이 그래픽 카드 드라이버가 설치됨을 확인하실 수 있습니다.  
+![Screenshot from 2023-04-24 12-23-20](https://user-images.githubusercontent.com/128343128/233893981-0b632404-be71-492d-a079-574fd3b47d9f.png)
+
 
 위의 명령어들은 `installing_graphic_driver.sh`에 있습니다
 터미널에서 `./installing_graphinc_driver.sh`를 실행하면 사용중이신 그래픽 카드에 적합한 그래픽 드라이버를 자동으로 인식하여 설치합니다.
@@ -124,13 +126,17 @@ Python 패키지가 설치 완료 되었다면 테스트 구동을 해봐야겠�
 ```shell
 ./CarlaUE4.sh 
 ```  
+![Screenshot from 2023-04-24 12-24-24](https://user-images.githubusercontent.com/128343128/233894167-c3475e30-6203-4a9d-b5b8-138066fb8cbc.png)
+
 
 **(2) 2nd terminal**  
 두 번째 터미널에서는 여러 차량들을 배치하여 교통상황을 꾸미는 Carla Simulator의 Client를 실행해줍니다.  
 ```shell
 python generate_traffic.py      # 랜덤으로 차량 배치를 합니다
 ```
-위의 `generate_traffic.py`를 실행하면 아래 그림과 같이 차량이 없던 Carla Simulator Server에 차량이 무작위로 배치되며 주행하는 것을 확인하실 수 있습니다.
+위의 `generate_traffic.py`를 실행하면 아래 그림과 같이 차량이 없던 Carla Simulator Server에 차량이 무작위로 배치되며 주행하는 것을 확인하실 수 있습니다.  
+![Screenshot from 2023-04-24 12-24-56](https://user-images.githubusercontent.com/128343128/233894222-cf97c3f4-641a-4d5f-851d-8691fac500e8.png)
+위 첫 번째 터미널에서의 Carla 실행 화면에 차량이 배치되어 도로를 주행하는 것을 보실 수 있습니다.
 
 **(3) 3rd terminal**  
 세 번째 터미널에서는 차량 조종 및 차량 움직임 등을 볼 수 있는 Carla Simulator의 Client를 실행해줍니다.
@@ -139,6 +145,7 @@ python manual_control.py
 ```
 pygame 기반으로 동작하는 Carla Simulator의 Client로서, 직접 차량을 조작할 수 있습니다.  
 Carla Simulator의 Auto-pilot 기능을 실행하려면 'P'키를 눌러주면 자동으로 주행하는 것을 확인하실 수 있습니다.
+![Screenshot from 2023-04-24 12-25-17](https://user-images.githubusercontent.com/128343128/233894361-bccdc137-947f-4ee9-b1fa-9b998656f2f9.png)
 
 
 ### 2.3 Carla Leaderboard 설치
