@@ -27,11 +27,9 @@ pip3 install --upgrade pip
 # Python2
 pip install --upgrade pip
 
+pip install testresources
+
 # 파이썬 의존성 패키지 설치
-
-pip install testresouces &&
-pip3 install testresources
-
 pip install --user setuptools &&
 pip3 install --user -Iv setuptools==47.3.1 &&
 pip install --user distro &&
@@ -43,9 +41,9 @@ pip3 install --user wheel auditwheel
 
 
 # Carla 시뮬레이터 설치
-cd /home/${USER}/Desktop/AGC/Carla-Simulator
-wget -P ~/AGC/Carla-Simulator https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/Leaderboard/CARLA_Leaderboard_20.tar.gz
-tar -xvfz CARLA_Leaderboard_20.tar.gz
+#cd /home/${USER}/Desktop/AGC/Carla-Simulator
+#wget -P ~/Desktop/AGC/Carla-Simulator https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/Leaderboard/CARLA_Leaderboard_20.tar.gz
+#tar -xvfz CARLA_Leaderboard_20.tar.gz
 
 # 환경변수 설정
 sh -c "echo \"export CARLA_ROOT=/home/${USER}/Desktop/AGC/Carla-Simulator\" >> ~/.bashrc"
@@ -57,18 +55,22 @@ sh -c "echo \"export PYTHONPATH=/home/${USER}/Desktop/AGC/Carla-Simulator/Python
 source ~/.bashrc
 
 # Python 패키지 설치
-cd PythonAPI/exmaples
+cd /home/${USER}/Desktop/AGC/Carla-Simulator/PythonAPI/examples
 pip install -r requirements.txt
 
 # Carla Leaderboard 설치
 cd /home/${USER}/Desktop/AGC/Carla-Leaderboard
 git clone -b leaderboard-2.0 --single-branch https://github.com/carla-simulator/leaderboard.git
+
+cd /home/${USER}/Desktop/AGC/Carla-Leaderboard/leaderboard
 pip install -r requirements.txt
 pip3 install -r requirements.txt
 
 # Carla Scenario Runner 설치
 cd /home/${USER}/Desktop/AGC/Carla-Scenario_Runner
 git clone -b leaderboard-2.0 --single-branch https://github.com/carla-simulator/scenario_runner.git
+
+cd /home/${USER}/Desktop/AGC/Carla-Scenario_Runner/scenario_runner
 pip install -r requirements.txt
 pip3 install -r requirements.txt
 
