@@ -41,9 +41,9 @@ pip3 install --user wheel auditwheel
 
 
 # Carla 시뮬레이터 설치
-#cd /home/${USER}/Desktop/AGC/Carla-Simulator
-#wget -P ~/Desktop/AGC/Carla-Simulator https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/Leaderboard/CARLA_Leaderboard_20.tar.gz
-#tar -xvfz CARLA_Leaderboard_20.tar.gz
+cd /home/${USER}/Desktop/AGC/Carla-Simulator
+wget -P ~/Desktop/AGC/Carla-Simulator https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/Leaderboard/CARLA_Leaderboard_20.tar.gz
+tar -xvfz CARLA_Leaderboard_20.tar.gz
 
 # 환경변수 설정
 sh -c "echo \"export CARLA_ROOT=/home/${USER}/Desktop/AGC/Carla-Simulator\" >> ~/.bashrc"
