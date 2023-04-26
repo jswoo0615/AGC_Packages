@@ -10,7 +10,7 @@ export TEAM_AGENT=${LEADERBOARD_ROOT}/op_bridge/op_ros_agent.py
 export PYTHONPATH="${CARLA_ROOT}/PythonAPI/carla/":"${SCENARIO_RUNNER_ROOT}":"${LEADERBOARD_ROOT}":${PYTHONPATH}
 export AGENT_FRAME_RATE="20"
 # Autonomous actor default role_name
-export AGENT_ROLE_NAME="hero"
+export AGENT_ROLE_NAME="ego_vehicle"
 
 # modes are 
 #   * "leaderboard" : when runner the leaderboard (route based) scenario collections 
@@ -19,7 +19,7 @@ export AGENT_ROLE_NAME="hero"
 export OP_BRIDGE_MODE="free" 
 
 # CARLA town name or custom OpenDRIVE absolute path, when BRIDGE_MODE is free 
-export FREE_MAP_NAME="Town02" 
+export FREE_MAP_NAME="Town01" 
 
 # Spawn point for the autonomous agent, when BRIDGE_MODE is free 
 # "x,y,z,roll,pitch,yaw"
