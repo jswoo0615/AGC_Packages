@@ -17,8 +17,8 @@
   </include>
 
   <!-- Setup -->
-  <arg name="x" value="0" />
-  <arg name="y" value="0" />
+  <arg name="x" value="" />
+  <arg name="y" value="" />
   <arg name="z" value="1.6" />
   <arg name="yaw" value="0.0" />
   <arg name="pitch" value="0.0" />
@@ -58,7 +58,7 @@
     <arg name="score_delta_threshold" default="20.0" />
     <arg name="min_stable_samples" default="40.0" />
     <arg name="fatal_time_threshold" default="2.0" />
-  </include> -->
+  </include>-->
 
   <!-- 
     # ndt_matching #
@@ -71,8 +71,8 @@
  <include file="$(find lidar_localizer)/launch/ndt_matching.launch">
     <arg name="get_height" value="true" />
     <arg name="use_gnss" default="true" />
-    <arg name="use_odom" default="false" /> 
-    <arg name='use_imu' value='false'/>    
+    <arg name="use_odom" default="true" /> 
+    <arg name='use_imu' value='true'/>    
     <arg name="imu_upside_down" default="false" />
     <arg name="imu_topic" default="/imu_raw" />
     <arg name="queue_size" default="1" />

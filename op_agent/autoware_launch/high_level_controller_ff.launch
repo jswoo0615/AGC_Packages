@@ -16,8 +16,8 @@
 	<arg name="steer_mode" 					default="1" /> <!-- steer angle = 0, steer torque = 1 -->
 	<arg name="drive_mode" 					default="1" /> <!-- velocity = 0, pedals stroke = 1 -->	
 		
-	<arg name="control_frequency" 			default="50"/> <!-- Hz -->
-	<arg name="min_follow_safe_distance"	default="4.0"/> <!-- m, it should be smaller than min follow distance in op_common_params -->
+	<arg name="control_frequency" 			default="10"/> <!-- Hz -->
+	<arg name="min_follow_safe_distance"	default="10.0"/> <!-- m, it should be smaller than min follow distance in op_common_params -->
 	
 	<arg name="max_steer_value"				default="11.52"/> <!-- radians -->		
 	<arg name="max_steer_torque"			default="100"/> <!-- %100 percentage, min = 0, max = 100 -->
@@ -27,9 +27,9 @@
 	<arg name="max_brake_value"				default="100"/> <!-- %100 percentage, min = 0, max = 100 -->
 	
 	<!-- These gains used for steer_mode = 0 -->
-	<arg name="steerAngleGainKP" 			default="1.0"/>
-	<arg name="steerAngleGainKI" 			default="0.0"/>
-	<arg name="steerAngleGainKD" 			default="0.0"/>
+	<arg name="steerAngleGainKP" 			default="148.0"/>
+	<arg name="steerAngleGainKI" 			default="130.0"/>
+	<arg name="steerAngleGainKD" 			default="100.0"/>
 	
 	<!-- Next two parameters are used for ACC tuning, will only be used when drive_mode param above is set to (0) which means velocity mode -->
 	<!-- If use_internal_acc parameter in op_common_params is set to "true", these values will be ignored and trajectory assigned value will be used directly as target velocity -->
@@ -37,9 +37,9 @@
 	<arg name="brakingPushRatio" 			default="1.0" /> <!-- push the velocity to decrease even when the velocity feedback signal from sensing is very small or delayed, contribute to final deceleration. where 1 predefined deceleration value is used -->
 	
 	<!-- These gains used for steer_mode = 1 -->
-	<arg name="steerTorqueGainKP" 			default="85.0"/>
+	<arg name="steerTorqueGainKP" 			default="25.0"/>
 	<arg name="steerTorqueGainKI" 			default="0.0"/>
-	<arg name="steerTorqueGainKD" 			default="0.0"/>
+	<arg name="steerTorqueGainKD" 			default="40.0"/>
 	
 	<arg name="accelGainKP" 				default="6.0"/>
 	<arg name="accelGainKI" 				default="0.5"/>

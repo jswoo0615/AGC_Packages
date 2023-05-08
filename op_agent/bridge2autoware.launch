@@ -2,7 +2,7 @@
 <launch>
   <param name="use_sim_time" value="true"/>
   <arg name='role_name' default='ego_vehicle'/>
-  <arg name='map_name' default='Town01'/>  
+  <arg name='map_name' default=''/>  
   <arg name="kml_map_path" default="$(env TEAM_CODE_ROOT)/autoware-contents/maps/vector_maps/kml/$(arg map_name).kml"/>
   <arg name="pointcloud_map_path" default="$(env TEAM_CODE_ROOT)/autoware-contents/maps/point_cloud_maps/$(arg map_name).pcd"/>
   <arg name="external_route_topic" default='' />
@@ -45,4 +45,3 @@
 
   
 </launch>
-

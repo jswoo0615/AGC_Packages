@@ -5,14 +5,14 @@
 #############################
 
 export SCENARIOS=${LEADERBOARD_ROOT}/data/all_towns_traffic_scenarios_public.json
-export ROUTES=${LEADERBOARD_ROOT}/data/routes_training.xml
+export ROUTES=${LEADERBOARD_ROOT}/data/routes_devtest.xml
 export REPETITIONS=1
-export DEBUG_CHALLENGE=0
+export DEBUG_CHALLENGE=1
 export TEAM_AGENT=${LEADERBOARD_ROOT}/op_bridge/op_ros_agent.py
 export PYTHONPATH="${CARLA_ROOT}/PythonAPI/carla/":"${SCENARIO_RUNNER_ROOT}":"${LEADERBOARD_ROOT}":${PYTHONPATH}
 export CHECKPOINT_ENDPOINT=${LEADERBOARD_ROOT}/results.json
 export CHALLENGE_TRACK_CODENAME=MAP
-export AGENT_ROLE_NAME="ego_vehicle"
+export AGENT_ROLE_NAME="hero"
 export OP_BRIDGE_MODE="leaderboard"
 
 #gnome-terminal -- bash -c roscore

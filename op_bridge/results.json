@@ -3,11 +3,11 @@
         "global_record": {
             "index": -1,
             "infractions": {
-                "collisions_layout": 20.96306015197858,
+                "collisions_layout": 0.0,
                 "collisions_pedestrian": 0.0,
-                "collisions_vehicle": 20.96306015197858,
-                "outside_route_lanes": 20.96306015197858,
-                "red_light": 20.96306015197858,
+                "collisions_vehicle": 6.241609745293726,
+                "outside_route_lanes": 0.0,
+                "red_light": 6.241609745293726,
                 "route_dev": 0.0,
                 "route_timeout": 0.0,
                 "stop_infraction": 0.0,
@@ -23,7 +23,7 @@
                     [
                         "RouteScenario_1",
                         1,
-                        "Failed"
+                        "Failed - Agent couldn't be set up"
                     ],
                     [
                         "RouteScenario_2",
@@ -39,14 +39,14 @@
             },
             "route_id": -1,
             "scores": {
-                "score_composed": 0.40881450851786116,
-                "score_penalty": 0.8131970630339895,
-                "score_route": 1.6172211527376934
+                "score_composed": 2.28127043962835,
+                "score_penalty": 0.855,
+                "score_route": 5.431596284829404
             },
             "scores_std_dev": {
-                "score_composed": 0.8176290170357223,
-                "score_penalty": 0.3736058739320209,
-                "score_route": 3.234442305475387
+                "score_composed": 4.5625408792567,
+                "score_penalty": 0.29000000000000004,
+                "score_route": 10.863192569658807
             },
             "status": "Failed"
         },
@@ -58,18 +58,14 @@
             {
                 "index": 0,
                 "infractions": {
-                    "collisions_layout": [
-                        "Agent collided against object with type=traffic.traffic_light and id=1597 at (x=325.795, y=200.612, z=0.031)"
-                    ],
+                    "collisions_layout": [],
                     "collisions_pedestrian": [],
                     "collisions_vehicle": [
-                        "Agent collided against object with type=vehicle.dodge.charger_2020 and id=1858 at (x=317.702, y=196.6, z=0.002)"
+                        "Agent collided against object with type=vehicle.dodge.charger_police and id=4502 at (x=206.582, y=196.359, z=0.002)"
                     ],
-                    "outside_route_lanes": [
-                        "Agent went outside its route lanes for about 3.641 meters (7.4% of the completed route)"
-                    ],
+                    "outside_route_lanes": [],
                     "red_light": [
-                        "Agent ran a red light 1598 at (x=341.25, y=209.1, z=0.104)"
+                        "Agent ran a red light 4302 at (x=341.25, y=209.1, z=0.104)"
                     ],
                     "route_dev": [],
                     "route_timeout": [],
@@ -77,15 +73,15 @@
                     "vehicle_blocked": []
                 },
                 "meta": {
-                    "duration_game": 137.75000205263495,
-                    "duration_system": 361.76197814941406,
+                    "duration_game": 15.900000236928463,
+                    "duration_system": 43.836881160736084,
                     "route_length": 737.4217028017997
                 },
                 "route_id": "RouteScenario_0",
                 "scores": {
-                    "score_composed": 1.6352580340714447,
-                    "score_penalty": 0.2527882521359583,
-                    "score_route": 6.468884610950774
+                    "score_composed": 9.1250817585134,
+                    "score_penalty": 0.42,
+                    "score_route": 21.726385139317618
                 },
                 "status": "Failed"
             },
@@ -103,17 +99,17 @@
                     "vehicle_blocked": []
                 },
                 "meta": {
-                    "duration_game": 17.900000266730785,
-                    "duration_system": 36.34437298774719,
+                    "duration_game": 0.0,
+                    "duration_system": 0.0,
                     "route_length": 1128.3240988201576
                 },
                 "route_id": "RouteScenario_1",
                 "scores": {
                     "score_composed": 0.0,
                     "score_penalty": 1.0,
-                    "score_route": 0
+                    "score_route": 0.0
                 },
-                "status": "Failed"
+                "status": "Failed - Agent couldn't be set up"
             },
             {
                 "index": 2,
@@ -194,15 +190,15 @@
         "carla_imu"
     ],
     "values": [
-        "0.409",
-        "1.617",
-        "0.813",
+        "2.281",
+        "5.432",
+        "0.855",
         "0.000",
-        "20.963",
-        "20.963",
-        "20.963",
+        "6.242",
         "0.000",
-        "20.963",
+        "6.242",
+        "0.000",
+        "0.000",
         "0.000",
         "0.000",
         "0.000"

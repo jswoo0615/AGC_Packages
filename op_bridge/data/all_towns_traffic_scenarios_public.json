@@ -1730,7 +1730,7 @@
                             }
                         }
                     ],
-                    "scenario_type": "Scenario3"
+                    "scenario_type": "Scenario1"
                 },
                 {
                     "available_event_configurations": [
@@ -4108,7 +4108,7 @@
                             }
                         }
                     ],
-                    "scenario_type": "3"
+                    "scenario_type": "Scenario1"
                 },
                 {
                     "available_event_configurations": [
@@ -11834,7 +11834,7 @@
                             }
                         }
                     ],
-                    "scenario_type": "3"
+                    "scenario_type": "Scenario1"
                 }
             ],
             "Town05": [
@@ -15135,7 +15135,7 @@
                             }
                         }
                     ],
-                    "scenario_type": "3"
+                    "scenario_type": "Scenario1"
                 },
                 {
                     "available_event_configurations": [
@@ -33858,7 +33858,7 @@
                             }
                         }
                     ],
-                    "scenario_type": "3"
+                    "scenario_type": "Scenario1"
                 },
                 {
                     "available_event_configurations": [

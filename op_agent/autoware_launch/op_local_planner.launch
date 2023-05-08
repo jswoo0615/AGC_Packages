@@ -1,6 +1,6 @@
 <!-- -->
 <launch>
-  <arg name="enable_openplanner_simulation" default="false"/>
+  <arg name="enable_openplanner_simulation" default=""/>
   <arg name="enable_object_insert" default="false"/>
   <arg name="kml_map_path" default=""/>
 
@@ -12,11 +12,10 @@
 	<arg name="samplingTipMargin" 		default="5"  /> 
 	<arg name="samplingOutMargin" 		default="15" /> 
 	<arg name="samplingSpeedFactor" 	default="1.0" />		
-	<arg name="enableHeadingSmoothing" 	default="false" />
-	<arg name="startFromFrontAxel" 		default="false" />
-  <arg name="enableForwardSimulation"	default="false" />
+	<arg name="enableHeadingSmoothing" 	default="true" />
+	<arg name="startFromFrontAxel" 		default="true" />
+  <arg name="enableForwardSimulation"	default="true" />
 </include> 
-
 
   <!-- 
     # open planner, motion prediction params #
@@ -27,11 +26,11 @@
 	<arg name="min_prediction_distance" 	default="10.0"/> 
 	<arg name="min_prediction_time" 		  default="2.0"/> 
 	<arg name="enableGenrateBranches" 		default="false"/>
-	<arg name="enableCurbObstacles" 		  default="false" />
+	<arg name="enableCurbObstacles" 		  default="true" />
 	<arg name="distanceBetweenCurbs" 		  default="1.5" />
 	<arg name="visualizationTime" 			  default="0.05" />
-	<arg name="enableStepByStepSignal" 		default="false" />
-	<arg name="enableParticleFilterPrediction" 	default="false" />
+	<arg name="enableStepByStepSignal" 		default="true" />
+	<arg name="enableParticleFilterPrediction" 	default="true" />
 		
 	<arg name="pose_weight_factor" 	default="0.2" />
 	<arg name="dir_weight_factor" 	default="0.2" />
@@ -71,7 +70,7 @@
 <include file="$(find op_local_planner)/launch/op_behavior_selector.launch">
 	<arg name="evidence_trust_number" 	default="3"/>
 	<arg name="use_sim_time" 		default="false"/>	
-	<arg name="show_driving_path" 		default="false"/>
+	<arg name="show_driving_path" 		default="true"/>
 </include> 
 
 
@@ -82,13 +81,13 @@
 <group unless="$(arg enable_object_insert)">
 <include file="$(find op_simulation_package)/launch/op_car_simulator_1.launch" >
   <arg name="id" 			default="1" />		
-  <arg name="enableRvizPoseSelect"	default="false"   />	
-  <arg name="enableLooper"		default="false"   />	
+  <arg name="enableRvizPoseSelect"	default="false"/>	
+  <arg name="enableLooper"		default="true"   />	
   <arg name="meshPath" 			default="package://vehicle_description/mesh/default.dae" />
   <arg name="baseColorR"		default="0.9" />
   <arg name="baseColorG"		default="0.1" />
   <arg name="baseColorB"		default="0.0" />
-  <arg name="logFolder" 		default="/home/hatem/SimuLogs/SimulatedCar1/" />
+  <arg name="logFolder" 		default="/home/${USER}/SimuLogs/SimulatedCar1/" />
 	
   <arg name="maxVelocity" 		default="4" />
   <arg name="minVelocity" 		default="0.0" />	
@@ -101,7 +100,7 @@
   <arg name="rollOutDensity" 		default="0.25" />
   <arg name="rollOutsNumber" 		default="8"    />
   <arg name="enableSwerving" 		default="false"  />
-  <arg name="enableFollowing" 		default="false" />
+  <arg name="enableFollowing" 		default="true" />
 	
   <arg name="horizonDistance" 		default="120"  />
 	
@@ -143,4 +142,3 @@
 </group>
 
 </launch>
-

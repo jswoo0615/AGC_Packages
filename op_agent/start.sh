@@ -19,7 +19,7 @@ echo "-------------------------------"
 # cd ${LEADERBOARD_ROOT}
 
 # source the autoware that will be used as autonomous agent
-source ~/Desktop/ros_ws/autoware.ai.openplanner/install/setup.bash
+source /home/siruu/Desktop/ros_ws/autoware.ai.openplanner/install/setup.bash
 
 # launch the ROS topics conversion and start autoware 
 roslaunch ${TEAM_CODE_ROOT}/bridge2autoware.launch role_name:=$role_name map_name:=$map_name external_route_topic:=$route_topic explore_mode:=$explore_mode
