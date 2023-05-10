@@ -181,10 +181,10 @@ class RosAgent(AutonomousAgent):
         cmd.brake = data.twist.linear.y/100.0        
 
         #print('Received Command : ', cmd.throttle, cmd.steer)
-        # if cmd.throttle < 0:
-        #     cmd.reverse = 1
-        # else:
-        #     cmd.reverse = 0
+        if cmd.throttle < 0:
+            cmd.reverse = 1
+        else:
+            cmd.reverse = 0
 
         #cmd.gear = 1
         #cmd.manual_gear_shift = data.manual_gear_shift
@@ -356,7 +356,7 @@ class RosAgent(AutonomousAgent):
         twist_msg.twist.linear.x = data['speed']        
         if twist_msg.twist.linear.x < 0:
             twist_msg.twist.linear.x = 0
-        twist_msg.twist.angular.z = -self.current_control.steer
+        twist_msg.twist.angular.z = (-self.current_control.steer)+ 2.0
         twist_msg.twist.linear.z = 1 # to tell OpenPlanner to use the steer directly
         twist_msg.twist.angular.x = 1 # to tell OpenPlanner to use the steer directly 
 
@@ -379,7 +379,7 @@ class RosAgent(AutonomousAgent):
         """
         Overload this function to use stepping mode!
         """
-        return False
+        return True
 
     def run_step(self, input_data, timestamp):
         """

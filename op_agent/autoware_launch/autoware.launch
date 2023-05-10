@@ -43,4 +43,14 @@
   </include> 
   
  <include file="$(env TEAM_CODE_ROOT)/autoware_launch/high_level_controller_ff.launch"/> 
+ <include file="/home/siruu/Desktop/ros_ws/autoware.ai.openplanner/install/pure_pursuit/share/pure_pursuit/launch/pure_pursuit.launch">
+    <arg name="is_linear_interpolation" default="true"/>
+    <arg name="publishes_for_steering_robot" default="false"/>
+    <arg name="add_virtual_end_waypoints" default="false"/>
+    <arg name="const_lookahead_distance" default="20.0"/>
+    <arg name="const_velocity" default="5.0"/>
+    <arg name="lookahead_ratio" default="1.0"/>
+    <arg name="minimum_lookahead_distance" default="22.0"/>
+ </include>
+  
 </launch>

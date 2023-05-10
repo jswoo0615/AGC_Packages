@@ -1,6 +1,6 @@
 <!-- -->
 <launch>  
-  <arg name="enable_openplanner_simulation" default=""/>
+  <arg name="enable_openplanner_simulation" default="false"/>
   <arg name="enable_object_insert" default="false"/>
 
  <!-- 
@@ -57,7 +57,7 @@
   <arg name="cluster_size_max" default="100000" />
   <arg name="sync" default="false" />
   <arg name="use_diffnormals" default="false" />
-  <arg name="pose_estimation" default="false" />
+  <arg name="pose_estimation" default="true" />
   <arg name="clip_min_height" default="-1.6" />
   <arg name="clip_max_height" default="2.5" />
   <arg name="remove_points_upto" default="2.5" />
@@ -65,7 +65,7 @@
   <arg name="use_gpu" default="true" />  
   <arg name="cluster_merge_threshold" default="0" />
   <arg name="clustering_distance" default="0.75" />
-  <arg name="use_vector_map" default="false" />  
+  <arg name="use_vector_map" default="true" />  
   </include>
 </group>
  <!-- 
@@ -89,10 +89,10 @@
 	<arg name="max_remeber_time" default="1.5" />
 	<arg name="trust_counter" default="2" />	
 	<arg name="enableSimulationMode" value="$(arg enable_openplanner_simulation)" />
-	<arg name="enableStepByStepMode" default="false" />	
+	<arg name="enableStepByStepMode" default="true" />	
 	<arg name="vector_map_filter_distance" default="5.0" /> <!-- set 0 to disable vector map filtering  -->
 	<arg name="map_filter_type" default="2" /> <!-- 0 for disable filtering, 1 for boundary (wayarea) filtering, 2 for distance to centerline filtering -->	
-	<arg name="enableLogging" default="false" />
+	<arg name="enableLogging" default="true" />
 	<arg name="enableInternalVisualization" default="true" />
 	<arg name="useDetectionHulls" default="false" />
 

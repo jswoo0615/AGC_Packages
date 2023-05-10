@@ -7,4 +7,3 @@
   <node pkg="tf"  type="static_transform_publisher" name="map_to_mobility" args="0 0 0 0 0 0 /map /mobility 10" />
 
 </launch>
-
