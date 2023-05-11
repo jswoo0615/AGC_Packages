@@ -1,0 +1,29 @@
+repositories:
+  autoware/common:
+    type: git
+    url: https://github.com/jswoo0615/AGC_common.git
+    version: main
+  autoware/core_perception:
+    type: git
+    url: https://github.com/jswoo0615/AGC_core_perception.git
+    version: main
+  autoware/core_planning:
+    type: git
+    url: https://github.com/jswoo0615/AGC_core_planning.git
+    version: main
+  autoware/utilities:
+    type: git
+    url: https://github.com/jswoo0615/AGC_utilities.git
+    version: main
+  autoware/messages:
+    type: git
+    url: https://github.com/Autoware-AI/messages.git
+    version: master
+  autoware/simulation:
+    type: git
+    url: https://github.com/Autoware-AI/simulation.git
+    version: master
+  autoware/visualization:
+    type: git
+    url: https://github.com/Autoware-AI/visualization.git
+    version: master
