@@ -27,3 +27,19 @@ repositories:
     type: git
     url: https://github.com/Autoware-AI/visualization.git
     version: master
+  drivers/awf_drivers:
+    type: git
+    url: https://github.com/Autoware-AI/drivers.git
+    version: master
+  citysim:
+    type: git
+    url: https://github.com/CPFL/osrf_citysim.git
+    version: master
+  car_demo:
+    type: git
+    url: https://github.com/CPFL/car_demo.git
+    version: master
+  drivers/ds4:
+    type: git
+    url: https://github.com/tier4/ds4.git
+    version: master
