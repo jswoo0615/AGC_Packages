@@ -119,8 +119,6 @@ sh -c "echo \"export PYTHONPATH=/home/${USER}/Desktop/AGC/Carla-Simulator/Python
 환경변수 설정 후, Carla Simulator 폴더 내의 PythonAPI/examples 폴더로 이동하여 위의 Python 종속성 패키지에 잠깐 언급되었던 부분에 대해 추가 Python 패키지를 설치해줍니다.
 `pip install -r requirements.txt`
 
-Python 패키지가 설치 완료 되었다면 테스트 구동을 해봐야겠지요?  
-
 **(1) 1st terminal**   
 첫 번째 터미널에서는 Carla Simulator 루트 디렉토리로 이동하여 Carla Simulator의 Server를 실행해줍니다.  
 ```shell
