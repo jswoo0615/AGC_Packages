@@ -1,1 +1,0 @@
-mkdir /home/${USER}/Desktop/AGC
