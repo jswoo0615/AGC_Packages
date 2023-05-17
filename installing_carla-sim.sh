@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# 메인 경로 설정
-mkdir -p /home/${USER}/Desktop/AGC/AGC_Carla_Simulator
-
 # Carla Simulator 설치
 # 의존성 패키지 설치
 sudo apt-get update &&
@@ -39,7 +36,7 @@ python -m pip install pygame
 python3 -m pip3 install pygame
 
 # Carla 시뮬레이터 설치
-cd /home/${USER}/Desktop/AGC/Carla-Simulator
+#cd /home/${USER}/Desktop/AGC/Carla-Simulator
 wget -P ~/Desktop/AGC/Carla-Simulator https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/Leaderboard/CARLA_Leaderboard_20.tar.gz
 tar -xvfz CARLA_Leaderboard_20.tar.gz
 
@@ -55,8 +52,3 @@ sh -c "echo \"export PYTHONPATH=/home/${USER}/Desktop/AGC/Carla-Simulator/Python
 sh -c "echo \"export PYTHONPATH=/home/${USER}/Desktop/AGC/Carla-Simulator/PythonAPI/carla/agents\" >> ~/.bashrc"
 sh -c "echo \"export PYTHONPATH=/home/${USER}/Desktop/AGC/Carla-Simulator/PythonAPI/carla/dist/carla-0.9.13-py2.7-linux-x86_64.egg\" >> ~/.bashrc"    # ROS Melodic은 Python2.x를 사용, Python3.x로 추후 변경 예정
 source ~/.bashrc
-
-# 환경변수 등록
-
-
-exit 0
