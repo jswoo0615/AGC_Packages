@@ -36,6 +36,8 @@
   	<arg name='enable_object_insert' value='$(arg enable_object_insert)'/>
   </include>
 
+ <include file="$(env TEAM_CODE_ROOT)/autoware_launch/traffic_light_detector.launch"/>  
+
  <include file="$(env TEAM_CODE_ROOT)/autoware_launch/op_local_planner.launch">  
   	<arg name='enable_openplanner_simulation' value='$(arg enable_openplanner_simulation)'/>
   	<arg name='enable_object_insert' value='$(arg enable_object_insert)'/>

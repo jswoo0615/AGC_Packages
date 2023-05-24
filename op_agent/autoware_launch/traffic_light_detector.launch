@@ -5,7 +5,7 @@
   <arg name="camera_light_src" default="/camera_light_color" />
   <arg name="ams_light_src" default="/ams_light_color" />
   <!-- Add Camera frame relay in bridge2autoware.launch file-->
-  <!--<arg name="camera_id" value="/carla/$(arg role_name)/camera/rgb/front"/>-->
+  <!-- <arg name="camera_id" value="/carla/ego_vehicle/camera/rgb/front"/> -->
   <arg name="camera_id" value="front_camera_id"/> 
   <arg name="x_adjust" default="2" />
   <arg name="y_adjust" default="2" />
