@@ -2,3 +2,5 @@
 *.log
 .project
 .pydevproject
+results_1.json
+results.json
