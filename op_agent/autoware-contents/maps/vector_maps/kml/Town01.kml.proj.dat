@@ -1,2 +1,2 @@
 ProjType,ProjString,Longitude,Latitude,Altitude,X,Y,Z
-UTM,+lat_0=4.9000000000000000e+1 +lon_0=8.0000000000000000e+0,0,0,0,0,0,0
+ ,+proj=tmerc +lat_0=0 +lon_0=0 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +geoidgrids=egm96_15.gtx +vunits=m +no_defs ,0,0,0,0,0,0
