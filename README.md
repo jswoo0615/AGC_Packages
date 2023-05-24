@@ -1,6 +1,22 @@
 # AGC_Autoware_AI  
 ## <b>1. 설치 과정</b>
-### <b>1. 패키지 다운로드</b>
+### <b>1. CUDA / CUDNN 설치</b>  
+- `tlr (traffic light recognition)` 사용 시 필요 사항  
+<t> - CUDA 11.1, cudnn 8  
+<t> - cudnn 8  
+<t> - YOLO v3 / v4
+1. CUDA 설치  
+- CUDA Toolkit 11.1을 다운받는 아래 링크로 이동합니다.  
+[CUDA Toolkit Download](`https://developer.nvidia.com/cuda-11.1.0-download-archive`)
+- OS, 아키텍처 등을 선택하고 Installer Type에서 <b>`runfile (local)`</b>로 선택하여 다운받습니다.  
+- `*.run` 설치파일을 받고 실행합니다.  (그림 추가)
+- 
+- 
+
+
+2. cudnn 설치
+
+### <b>2. 패키지 다운로드</b>
 - `src` 폴더를 생성합니다.  
 ```shell
 mkdir -p src
