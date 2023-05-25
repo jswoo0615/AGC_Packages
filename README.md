@@ -50,7 +50,7 @@
 ![Screenshot from 2023-05-25 09-51-44](https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/e84c077b-0c73-4b6c-b73b-11c12f8f81ec)
 
 ### <b>2. 패키지 다운로드</b>
-- <b> 당 과정은 `/home/${USER}/Desktop/AGC/Autoware_AI` 폴더를 기준으로 진행됩니다.</b> 
+- <b> 당 과정은 `/home/${USER}/Desktop/AGC/AGC_Autoware_AI` 폴더를 기준으로 진행됩니다.</b> 
 - 종속성 패키지를 설치합니다.  
   ```shell
   sudo apt update
