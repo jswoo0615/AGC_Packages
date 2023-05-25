@@ -74,10 +74,10 @@
 
 ### <b>2. 빌드</b>
 - rosdep를 이용하여 종속성 패키지를 설치합니다.  
-```shell
-rosdep update
-rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
-```
+  ```shell
+  rosdep update
+  rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+  ```
 - 터미널의 경로를 `AGC_Autoware_AI 루트 폴더`로 이동합니다.  
 - 아래와 같이 명령어를 실행합니다.  
 `colcon build --cmake-args -DCMAKE_TYPE=Release` 
