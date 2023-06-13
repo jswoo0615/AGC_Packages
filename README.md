@@ -44,7 +44,7 @@
   ```
 - 설치 확인  
   ```shell
-  cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_NAJRO -A 2
+  cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
   ```
   위의 명령어를 실행하여 cuDNN이 제대로 설치되었는지 확인할 수 있습니다.  
 ![Screenshot from 2023-05-25 09-51-44](https://github.com/jswoo0615/jswoo0615.github.io/assets/128343128/e84c077b-0c73-4b6c-b73b-11c12f8f81ec)
